@@ -1,3 +1,10 @@
+/// Important Note ///
+
++ The files with dummy content without real code -> you can edit the code and file name according to the requirement
++ Don't change the folder structure at any cost
++ Then related code under the correct file
+
+
 lib/
 │
 ├── main.dart
