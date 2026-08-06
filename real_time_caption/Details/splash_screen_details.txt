@@ -1,0 +1,576 @@
+/// =============================================================================
+///
+///                           LINGUALIVE - SPLASH SCREEN
+///
+/// =============================================================================
+///
+/// PAGE NAME
+/// ---------
+/// Splash Screen
+///
+/// PURPOSE
+/// -------
+/// Serves as the application's startup entry point. The screen displays
+/// branding, initializes AI components, prepares offline resources,
+/// restores user preferences, validates authentication, and decides the
+/// next navigation destination.
+///
+/// DESCRIPTION
+/// -----------
+/// This screen represents the startup pipeline of LinguaLive.
+/// Although this page currently uses only locally generated dummy data,
+/// it is designed to seamlessly integrate with future backend services
+/// and local AI inference engines.
+///
+/// Startup stages include:
+///
+/// • Application bootstrapping
+/// • Theme initialization
+/// • Local settings loading
+/// • Language preference loading
+/// • AI model initialization
+/// • Voice engine preparation
+/// • Translation engine preparation
+/// • Authentication verification
+/// • Offline resource preparation
+/// • Navigation decision
+///
+/// No backend communication is performed in this implementation.
+///
+/// =============================================================================
+///
+/// UI SECTIONS
+/// -----------
+///
+/// 1. Animated Gradient Background
+///
+/// 2. Decorative Floating Shapes
+///
+/// 3. Hero App Logo
+///
+/// 4. Application Name
+///
+/// 5. Tagline
+///
+/// 6. AI Illustration Area
+///
+/// 7. Startup Progress Card
+///
+/// 8. Current Initialization Task
+///
+/// 9. Progress Indicator
+///
+/// 10. AI Models Status List
+///
+/// 11. Authentication Status Card
+///
+/// 12. Footer Information
+///
+/// =============================================================================
+///
+/// NAVIGATION FLOW
+/// ---------------
+///
+/// Splash Screen
+///      │
+///      ▼
+/// Initialize Resources
+///      │
+///      ▼
+/// Load Local Preferences
+///      │
+///      ▼
+/// Initialize AI Models
+///      │
+///      ▼
+/// Check Authentication
+///      │
+///      ├────────► Home
+///      │
+///      ├────────► Login
+///      │
+///      └────────► Onboarding
+///
+/// (Dummy only in this implementation)
+///
+/// =============================================================================
+///
+/// DYNAMIC COMPONENTS
+/// ------------------
+///
+/// StartupTask
+///
+/// Represents one initialization task.
+///
+/// Example:
+///
+/// • Loading Translation Engine
+/// • Loading Speech Engine
+/// • Preparing Offline Models
+///
+/// -------------------------------------
+///
+/// ModelInitializationStatus
+///
+/// Represents readiness of each AI model.
+///
+/// Example:
+///
+/// • Whisper
+/// • Gemma
+/// • NLLB
+///
+/// -------------------------------------
+///
+/// StartupProgress
+///
+/// Stores
+///
+/// • current percentage
+/// • remaining time
+/// • active step
+///
+/// -------------------------------------
+///
+/// SessionStatus
+///
+/// Represents
+///
+/// • Authenticated
+/// • Guest
+/// • First Time User
+///
+/// -------------------------------------
+///
+/// LanguagePreference
+///
+/// Stores
+///
+/// • Source language
+/// • Target language
+///
+/// =============================================================================
+///
+/// FUTURE BACKEND INTEGRATION
+/// --------------------------
+///
+/// During startup this page may:
+///
+/// • Refresh authentication token
+/// • Download configuration
+/// • Validate application version
+/// • Sync user preferences
+/// • Download language packages
+/// • Restore unfinished conversations
+/// • Sync cloud settings
+///
+/// =============================================================================
+///
+/// TECHNOLOGIES USED
+/// -----------------
+///
+/// AI
+///
+/// • Whisper Large
+/// • Whisper Streaming
+/// • NLLB-200
+/// • Gemma 3B
+///
+/// Voice
+///
+/// • Silero VAD
+/// • WebRTC VAD
+///
+/// Audio
+///
+/// • DeepFilterNet
+/// • FFmpeg
+///
+/// Runtime
+///
+/// • ONNX Runtime
+///
+/// Language Detection
+///
+/// • fastText
+///
+/// Communication
+///
+/// • WebSocket
+///
+/// Storage
+///
+/// • PostgreSQL
+/// • pgvector
+///
+/// =============================================================================
+///
+/// DATA MODELS REQUIRED
+/// --------------------
+///
+/// • StartupTask
+///
+/// • ModelInitializationStatus
+///
+/// • StartupProgress
+///
+/// • SessionStatus
+///
+/// • LanguagePreference
+///
+/// =============================================================================
+///
+/// FUTURE API ENDPOINTS
+/// --------------------
+///
+/// POST /auth/refresh
+///
+/// GET /user/profile
+///
+/// GET /config
+///
+/// GET /languages
+///
+/// GET /startup/status
+///
+/// GET /models/status
+///
+/// POST /analytics/startup
+///
+/// =============================================================================
+///
+/// DATABASE TABLES
+/// ---------------
+///
+/// users
+///
+/// user_preferences
+///
+/// conversations
+///
+/// ai_models
+///
+/// languages
+///
+/// startup_logs
+///
+/// device_sessions
+///
+/// =============================================================================
+///
+/// ASSETS REQUIRED
+/// ---------------
+///
+/// app_logo.svg
+///
+/// splash_background.png
+///
+/// animated_wave.json
+///
+/// startup_glow.png
+///
+/// app_icon.png
+///
+/// =============================================================================
+///
+/// ICONS REQUIRED
+/// --------------
+///
+/// Icons.translate
+///
+/// Icons.mic
+///
+/// Icons.record_voice_over
+///
+/// Icons.language
+///
+/// Icons.auto_awesome
+///
+/// Icons.memory
+///
+/// Icons.cloud_done
+///
+/// Icons.shield
+///
+/// Icons.check_circle
+///
+/// Icons.sync
+///
+/// Icons.hourglass_top
+///
+/// =============================================================================
+///
+/// THEME COLORS
+/// ------------
+///
+/// Primary
+///
+/// Deep Purple
+///
+/// Secondary
+///
+/// Cyan
+///
+/// Accent
+///
+/// Blue
+///
+/// Success
+///
+/// Green
+///
+/// Warning
+///
+/// Amber
+///
+/// Error
+///
+/// Red
+///
+/// Background
+///
+/// Dynamic Gradient
+///
+/// =============================================================================
+///
+/// ANIMATIONS
+/// ----------
+///
+/// • Logo Scale Animation
+///
+/// • Logo Fade Animation
+///
+/// • Hero Transition
+///
+/// • Floating Background Shapes
+///
+/// • Gradient Animation
+///
+/// • Progress Animation
+///
+/// • Loading Pulse
+///
+/// • Animated Status Icons
+///
+/// • AnimatedSwitcher
+///
+/// • AnimatedOpacity
+///
+/// • AnimatedContainer
+///
+/// =============================================================================
+///
+/// ACCESSIBILITY CONSIDERATIONS
+/// ----------------------------
+///
+/// • Screen reader friendly labels
+///
+/// • High contrast support
+///
+/// • Large text compatibility
+///
+/// • Minimum touch target 48dp
+///
+/// • Dark mode compatibility
+///
+/// • Keyboard accessibility
+///
+/// • Semantic widgets
+///
+/// =============================================================================
+///
+/// EDGE CASES
+/// ----------
+///
+/// • Slow initialization
+///
+/// • Empty startup task list
+///
+/// • AI initialization failure
+///
+/// • Authentication expired
+///
+/// • Missing preferences
+///
+/// • Offline launch
+///
+/// • Corrupted cached data
+///
+/// • Missing language package
+///
+/// • Unexpected startup interruption
+///
+/// =============================================================================
+///
+/// VALIDATION RULES
+/// ----------------
+///
+/// • Progress between 0 and 100
+///
+/// • Task title cannot be empty
+///
+/// • Model name required
+///
+/// • Session state required
+///
+/// • Language codes validated
+///
+/// =============================================================================
+///
+/// ERROR HANDLING
+/// --------------
+///
+/// Display reusable error state when:
+///
+/// • Initialization fails
+///
+/// • Preferences unavailable
+///
+/// • AI model unavailable
+///
+/// • Authentication check fails
+///
+/// =============================================================================
+///
+/// LOADING STATES
+/// --------------
+///
+/// • Animated progress bar
+///
+/// • Skeleton cards
+///
+/// • Pulsing indicators
+///
+/// • Animated task switching
+///
+/// =============================================================================
+///
+/// EMPTY STATES
+/// ------------
+///
+/// • No startup tasks
+///
+/// • No AI models
+///
+/// • No preferences
+///
+/// =============================================================================
+///
+/// OFFLINE BEHAVIOUR
+/// -----------------
+///
+/// • Uses cached preferences
+///
+/// • Loads local AI models
+///
+/// • Skips cloud synchronization
+///
+/// • Allows offline initialization
+///
+/// =============================================================================
+///
+/// SECURITY CONSIDERATIONS
+/// -----------------------
+///
+/// • Secure token restoration
+///
+/// • No sensitive information displayed
+///
+/// • Encrypted local preferences
+///
+/// • Secure session validation
+///
+/// =============================================================================
+///
+/// PERFORMANCE OPTIMIZATIONS
+/// -------------------------
+///
+/// • const widgets
+///
+/// • Lazy widget construction
+///
+/// • Minimal rebuilds
+///
+/// • Efficient animations
+///
+/// • Cached gradients
+///
+/// • Reusable widgets
+///
+/// • Responsive layout
+///
+/// =============================================================================
+///
+/// WIDGET TREE OVERVIEW
+/// --------------------
+///
+/// MaterialApp
+/// └── SplashScreen
+///     └── Scaffold
+///         └── SafeArea
+///             └── Stack
+///                 ├── Animated Background
+///                 ├── Center Content
+///                 │   ├── Hero Logo
+///                 │   ├── Title
+///                 │   ├── Tagline
+///                 │   ├── Illustration
+///                 │   ├── Progress Card
+///                 │   ├── AI Status Card
+///                 │   └── Authentication Card
+///                 └── Footer
+///
+/// =============================================================================
+///
+/// COMPLETE TESTING CHECKLIST
+/// --------------------------
+///
+/// □ Layout overflow
+///
+/// □ Keyboard overlap
+///
+/// □ Orientation change
+///
+/// □ Tablet responsiveness
+///
+/// □ Small phone support
+///
+/// □ Dark Mode
+///
+/// □ Light Mode
+///
+/// □ Large text
+///
+/// □ Screen reader
+///
+/// □ Hero animation
+///
+/// □ Gradient animation
+///
+/// □ Loading animation
+///
+/// □ Empty task list
+///
+/// □ Error state
+///
+/// □ Success state
+///
+/// □ Long task titles
+///
+/// □ AI status cards
+///
+/// □ Progress updates
+///
+/// □ Memory leak
+///
+/// □ Performance profiling
+///
+/// □ Accessibility
+///
+/// □ Localization readiness
+///
+/// □ Responsive spacing
+///
+/// □ Material 3 compliance
+///
+/// =============================================================================
