@@ -1,5 +1,3 @@
-/// Auto-generated placeholder for filter_sheet.
+import 'package:flutter/material.dart';
 
-class FilterSheet {
-  const FilterSheet();
-}
+Future<void> showFilterSheet(BuildContext context) => showModalBottomSheet<void>(context: context, builder: (_) => SafeArea(child: Padding(padding: const EdgeInsets.all(24), child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [Text('Filters', style: Theme.of(context).textTheme.titleLarge), const SizedBox(height: 16), const Text('Filter controls will be supplied by the owning feature.'), const SizedBox(height: 16), FilledButton(onPressed: () => Navigator.of(context).pop(), child: const Text('Done'))]))));

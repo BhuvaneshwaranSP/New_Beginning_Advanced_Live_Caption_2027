@@ -1,5 +1,5 @@
-/// Auto-generated placeholder for routes.
-
-class Routes {
-  const Routes();
+abstract final class AppRoutes {
+  static const home = '/';
+  static const settings = '/settings';
+  static const profile = '/profile';
 }

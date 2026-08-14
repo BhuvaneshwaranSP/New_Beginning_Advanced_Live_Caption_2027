@@ -1,0 +1,47 @@
+lib/
+└── features/
+    └── notifications/
+        ├── notifications_feature.dart
+        │
+        ├── data/
+        │   ├── models/
+        │   │   └── notifications_feature_model.dart
+        │   ├── data_sources/
+        │   │   └── mock_notifications_data_source.dart
+        │   └── dummy/
+        │       └── notifications_dummy_data.dart
+        │
+        ├── domain/
+        │   └── entities/
+        │       └── notifications_feature_entity.dart
+        │
+        └── presentation/
+            ├── pages/
+            │   └── notifications_page.dart
+            │
+            ├── widgets/
+            │   ├── notification_tile.dart
+            │   ├── notifications_header.dart
+            │   └── notifications_states.dart
+            │
+            └── controllers/
+                └── notifications_controller.dart
+
+
+TEST CHECKLIST
+    Phone portrait/landscape layout and no overflow
+    Tablet and wide-screen responsive content width
+    Dark mode and Material 3 contrast
+    Large text / text scaling
+    Screen-reader semantics and accessible touch targets
+    Loading, success, empty, filtered-empty, error, and offline states
+    Long notification titles/messages
+    Unread count and mark-all-as-read state
+    Category filter transitions
+    Notification tap callbacks
+    Navigation integration point
+    Localization-ready text wrapping
+    Animation/interaction smoothness
+    Rebuild and memory performance
+    Null/invalid dummy-data edge cases
+    No backend/API/network/database implementation

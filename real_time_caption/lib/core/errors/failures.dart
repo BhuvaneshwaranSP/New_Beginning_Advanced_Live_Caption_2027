@@ -1,5 +1,8 @@
-/// Auto-generated placeholder for failures.
+sealed class Failure {
+  final String message;
+  const Failure(this.message);
+}
 
-class Failures {
-  const Failures();
+class UnknownFailure extends Failure {
+  const UnknownFailure([super.message = 'Something went wrong.']);
 }

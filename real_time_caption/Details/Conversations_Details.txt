@@ -1,0 +1,48 @@
+lib/
+└── features/
+    └── conversations/
+        ├── conversations_feature.dart
+        │
+        ├── data/
+        │   ├── models/
+        │   │   └── conversations_feature_model.dart
+        │   ├── data_sources/
+        │   │   └── mock_conversations_data_source.dart
+        │   └── dummy/
+        │       └── conversations_dummy_data.dart
+        │
+        ├── domain/
+        │   └── entities/
+        │       └── conversations_feature_entity.dart
+        │
+        └── presentation/
+            ├── pages/
+            │   └── conversations_page.dart
+            │
+            ├── widgets/
+            │   ├── conversations_header.dart
+            │   ├── conversation_filter_bar.dart
+            │   ├── conversation_card.dart
+            │   └── conversation_states.dart
+            │
+            └── controllers/
+                └── conversations_controller.dart
+
+
+Test Checklist
+    Verify layout has no overflow on small and large phones.
+    Verify portrait and landscape layouts.
+    Verify tablet layout uses the wider content arrangement correctly.
+    Verify search, filter, sort, and state transitions.
+    Verify keyboard does not obscure the search field.
+    Verify loading, empty, error/retry, success, and offline representations.
+    Verify long conversation titles, multilingual text, and missing/empty values.
+    Verify dark mode, large text, contrast, and screen-reader labels.
+    Verify touch targets and semantic descriptions for all interactive controls.
+    Verify conversation-card tap callbacks and menu callbacks.
+    Verify responsive resizing and scrolling performance.
+    Verify lightweight animations do not cause jank.
+    Verify no backend, API, database, networking, authentication, or real AI functionality is executed.
+    Verify localization readiness for Tamil, English, Telugu, Hindi, Malayalam, and other supported languages.
+    Verify future session-history integration points are clearly isolated.
+    Verify analyzer warnings, null-safety issues, and deprecated Material APIs.

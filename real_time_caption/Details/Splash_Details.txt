@@ -1,0 +1,41 @@
+lib/
+└── features/
+    └── splash/
+        ├── splash_feature.dart
+        ├── data/
+        │   ├── models/
+        │   │   └── splash_feature_model.dart
+        │   ├── data_sources/
+        │   │   └── mock_splash_data_source.dart
+        │   └── dummy/
+        │       └── splash_dummy_data.dart
+        │
+        ├── domain/
+        │   └── entities/
+        │       └── splash_feature_entity.dart
+        │
+        └── presentation/
+            ├── pages/
+            │   └── splash_page.dart
+            │
+            ├── widgets/
+            │   └── splash_branding.dart
+            │
+            └── controllers/
+                └── splash_controller.dart
+
+
+
+TEST CHECKLIST
+    Verify splash layout has no overflow on small phones, large phones, tablets, portrait, and landscape.
+    Verify dark mode, large text, screen-reader semantics, touch targets, and contrast.
+    Verify loading animation and visual state transition are smooth.
+    Verify the screen remains stable when system text scaling is increased.
+    Verify navigation callback integration point can transition to the next startup screen without changing the splash UI.
+    Verify long/short localized strings do not clip.
+    Verify offline/error conditions do not produce misleading functional claims.
+    Verify animation does not cause excessive rebuilds or memory usage.
+    Verify the screen contains no backend, API, persistence, authentication, networking, or real AI functionality.
+    Verify all interactive elements have valid callbacks.
+    Verify localization readiness for multilingual LinguaLive content.
+    Verify accessibility labels describe the LinguaLive brand and current loading state.

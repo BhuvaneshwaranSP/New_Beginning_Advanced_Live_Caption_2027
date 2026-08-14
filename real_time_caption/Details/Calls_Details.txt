@@ -1,0 +1,42 @@
+lib/
+└── features/
+    └── calls/
+        ├── calls_feature.dart
+        │
+        ├── data/
+        │   ├── models/
+        │   │   └── calls_feature_model.dart
+        │   ├── data_sources/
+        │   │   └── mock_calls_data_source.dart
+        │   └── dummy/
+        │       └── calls_dummy_data.dart
+        │
+        ├── domain/
+        │   └── entities/
+        │       └── calls_feature_entity.dart
+        │
+        └── presentation/
+            ├── pages/
+            │   └── calls_page.dart
+            │
+            ├── widgets/
+            │   ├── calls_header.dart
+            │   ├── call_session_card.dart
+            │   └── calls_states.dart
+            │
+            └── controllers/
+                └── calls_controller.dart
+
+
+TEST CHECKLIST
+    Verify phone/tablet layouts in portrait and landscape without overflow.
+    Verify dark mode, large text, contrast, semantic labels, and screen-reader navigation.
+    Verify loading, empty, error/retry, connected, reconnecting, and offline representations.
+    Verify long participant names, long language names, missing/invalid data, and empty call history.
+    Verify search/filter interaction and local state transitions.
+    Verify all buttons have valid callbacks and no future functionality is executed.
+    Verify call-card selection, incoming-call presentation, and start-call interaction.
+    Verify animation smoothness and absence of unnecessary rebuilds.
+    Verify localization readiness for multilingual labels and participant data.
+    Verify no networking, authentication, Firebase, database, WebSocket, real speech recognition, translation, audio processing, or AI inference is implemented.
+    Verify the feature remains compatible with the supplied features/calls/ architecture.

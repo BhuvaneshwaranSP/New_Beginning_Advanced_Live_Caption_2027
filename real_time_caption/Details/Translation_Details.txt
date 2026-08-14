@@ -1,0 +1,43 @@
+lib/
+└── features/
+    └── translation/
+        ├── translation_feature.dart
+        │
+        ├── data/
+        │   ├── models/
+        │   │   └── translation_model.dart
+        │   ├── data_sources/
+        │   │   └── mock_translation_data_source.dart
+        │   └── dummy/
+        │       └── translation_dummy_data.dart
+        │
+        ├── domain/
+        │   └── entities/
+        │       └── translation_entity.dart
+        │
+        └── presentation/
+            ├── pages/
+            │   └── translation_page.dart
+            │
+            ├── widgets/
+            │   ├── translation_header.dart
+            │   ├── language_pair_selector.dart
+            │   ├── translation_input_card.dart
+            │   ├── translation_result_card.dart
+            │   └── translation_states.dart
+            │
+            └── controllers/
+                └── translation_controller.dart
+
+
+Test Checklist
+    Verify layout and no overflow on small phones, large phones, tablets, portrait, and landscape.
+    Verify keyboard does not obscure the translation input or action controls.
+    Verify source/target language selection, swap, clear, and translate state transitions.
+    Verify loading, success, empty, error, and offline/reconnecting UI representations.
+    Verify dark mode, large text, screen-reader labels, semantic status information, and touch targets.
+    Verify long, empty, null-safe, and invalid text handling.
+    Verify responsive two-column translation layout on wider screens and stacked layout on phones.
+    Verify animation smoothness, rebuild efficiency, and memory usage.
+    Verify localization readiness for multilingual labels and translated content.
+    Verify future AI/translation integration comments are positioned at the intended integration points.

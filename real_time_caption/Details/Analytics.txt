@@ -1,0 +1,46 @@
+lib/
+└── features/
+    └── analytics/
+        ├── feature.dart
+        │
+        ├── data/
+        │   ├── models/
+        │   │   └── analytics_feature_model.dart
+        │   ├── data_sources/
+        │   │   └── mock_analytics_data_source.dart
+        │   └── dummy/
+        │       └── analytics_dummy_data.dart
+        │
+        ├── domain/
+        │   └── entities/
+        │       └── analytics_feature_entity.dart
+        │
+        └── presentation/
+            ├── pages/
+            │   └── analytics_page.dart
+            │
+            ├── widgets/
+            │   ├── analytics_header.dart
+            │   ├── analytics_summary_card.dart
+            │   ├── analytics_usage_chart.dart
+            │   ├── language_usage_card.dart
+            │   ├── session_analytics_card.dart
+            │   ├── translation_analytics_card.dart
+            │   └── analytics_states.dart
+            │
+            └── controllers/
+                └── analytics_controller.dart
+
+TEST CHECKLIST
+    Verify no layout overflow on small phones, large phones, tablets, portrait, and landscape.
+    Verify dark mode, large text, screen-reader semantics, contrast, and minimum touch targets.
+    Verify loading, empty, error/retry, success, and offline representations.
+    Verify time-range selection and local state transitions.
+    Verify multilingual labels and long language/session names.
+    Verify analytics cards, chart rendering, legends, and zero-value data.
+    Verify navigation callbacks do not throw and preserve the existing project router.
+    Verify keyboard/orientation changes do not clip content.
+    Verify scrolling performance and chart painting remain lightweight.
+    Verify null/empty/invalid dummy values are represented safely.
+    Verify future analytics/AI integration locations are clearly marked.
+    Verify no backend, API, Firebase, database, networking, persistence, or state-management package is used.

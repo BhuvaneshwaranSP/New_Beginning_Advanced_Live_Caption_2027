@@ -1,5 +1,6 @@
-/// Auto-generated placeholder for semantics_helpers.
+import 'package:flutter/widgets.dart';
 
-class SemanticsHelpers {
-  const SemanticsHelpers();
+abstract final class SemanticsHelpers {
+  static Widget label({required String label, required Widget child}) => Semantics(label: label, child: child);
+  static Widget button({required String label, required VoidCallback onTap, required Widget child}) => Semantics(button: true, label: label, onTap: onTap, child: child);
 }

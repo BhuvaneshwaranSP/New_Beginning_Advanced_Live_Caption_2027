@@ -1,0 +1,40 @@
+lib/
+└── features/
+    └── voice_clone/
+        ├── voice_clone_feature.dart
+        ├── data/
+        │   ├── models/
+        │   │   └── voice_clone_model.dart
+        │   ├── data_sources/
+        │   │   └── mock_voice_clone_data_source.dart
+        │   └── dummy/
+        │       └── voice_clone_dummy_data.dart
+        ├── domain/
+        │   └── entities/
+        │       └── voice_clone_entity.dart
+        └── presentation/
+            ├── pages/
+            │   └── voice_clone_page.dart
+            ├── widgets/
+            │   ├── voice_clone_header.dart
+            │   ├── voice_profile_card.dart
+            │   ├── voice_clone_controls.dart
+            │   └── voice_clone_states.dart
+            └── controllers/
+                └── voice_clone_controller.dart
+
+
+Test Checklist
+    Verify layout and overflow on small/large phones and tablets.
+    Verify portrait and landscape layouts.
+    Verify keyboard/focus behavior and no keyboard overlap.
+    Verify light/dark themes and large text scaling.
+    Verify screen-reader labels, semantic status information, and touch targets.
+    Verify local loading, empty, processing, success, error, and offline representations.
+    Verify voice-profile selection, recording-state transitions, and reset interactions.
+    Verify long/null/invalid dummy values do not break the layout.
+    Verify navigation callbacks are valid and do not invoke unimplemented functionality.
+    Verify lightweight animations remain smooth and do not cause unnecessary rebuilds.
+    Verify localization readiness for multilingual labels and voice metadata.
+    Verify no backend, API, authentication, Firebase, persistence, audio processing, or real voice-cloning functionality is executed.
+    Verify future integration comments remain at the intended integration points.

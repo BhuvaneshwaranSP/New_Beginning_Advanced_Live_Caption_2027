@@ -1,0 +1,43 @@
+lib/
+└── features/
+    └── chat/
+        ├── chat_feature.dart
+        │
+        ├── data/
+        │   ├── models/
+        │   │   └── chat_feature_model.dart
+        │   ├── data_sources/
+        │   │   └── mock_chat_data_source.dart
+        │   └── dummy/
+        │       └── chat_dummy_data.dart
+        │
+        ├── domain/
+        │   └── entities/
+        │       └── chat_feature_entity.dart
+        │
+        └── presentation/
+            ├── pages/
+            │   └── chat_page.dart
+            │
+            ├── widgets/
+            │   ├── chat_header.dart
+            │   ├── chat_message_bubble.dart
+            │   ├── chat_composer.dart
+            │   └── chat_states.dart
+            │
+            └── controllers/
+                └── chat_controller.dart
+
+
+Test Checklist
+    Verify phone/tablet portrait and landscape layouts with no overflow or clipping.
+    Verify keyboard opening/closing and composer behavior with large text.
+    Verify light/dark theme, contrast, touch targets, semantic labels, and screen-reader descriptions.
+    Verify multilingual original/translated message presentation, including long and empty text.
+    Verify incoming-call banner states and Accept/Reject callbacks.
+    Verify loading, empty, error, success, and offline/reconnecting representations.
+    Verify message sending UI state using only local dummy data.
+    Verify header actions, language-pair display, popup actions, and navigation callbacks.
+    Verify animation smoothness, rebuild efficiency, and memory behavior during long message lists.
+    Verify localization readiness for Tamil, Telugu, Hindi, Malayalam, and English text.
+    Verify future integration points remain UI-only and contain no backend/network implementation.

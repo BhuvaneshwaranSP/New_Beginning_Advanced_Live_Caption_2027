@@ -1,0 +1,46 @@
+lib/
+└── features/
+    └── transcription/
+        ├── transcription_feature.dart
+        │
+        ├── data/
+        │   ├── models/
+        │   │   └── transcription_model.dart
+        │   ├── data_sources/
+        │   │   └── mock_transcription_data_source.dart
+        │   └── dummy/
+        │       └── transcription_dummy_data.dart
+        │
+        ├── domain/
+        │   └── entities/
+        │       └── transcription_entity.dart
+        │
+        └── presentation/
+            ├── pages/
+            │   └── transcription_page.dart
+            │
+            ├── widgets/
+            │   ├── transcription_header.dart
+            │   ├── language_pair_card.dart
+            │   ├── transcript_segment_card.dart
+            │   └── transcription_states.dart
+            │
+            └── controllers/
+                └── transcription_controller.dart
+
+
+TEST CHECKLIST
+    Verify phone/tablet portrait and landscape layouts with no overflow or clipping.
+    Verify keyboard does not obscure controls if text-entry behavior is later integrated.
+    Verify light/dark theme contrast and large-text accessibility.
+    Verify screen-reader labels and minimum touch targets.
+    Verify loading, empty, processing, live, paused, error, success, and offline visual states.
+    Verify source/target language display and multilingual transcript content.
+    Verify speaker labels, confidence indicators, timestamps, and long transcript segments.
+    Verify local state transitions for Start/Pause/Resume/Clear controls.
+    Verify navigation callback behavior without implementing future navigation logic.
+    Verify future AI/streaming integration locations remain UI-only.
+    Verify animation smoothness and absence of unnecessary rebuilds.
+    Verify localization readiness for longer translated strings.
+    Verify accessibility when status is communicated without relying only on color.
+    Verify memory/performance with a larger dummy transcript list.

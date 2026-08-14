@@ -1,0 +1,39 @@
+ai_models/
+├── feature.dart
+│
+├── data/
+│   ├── models/
+│   │   └── ai_model_model.dart
+│   ├── data_sources/
+│   │   └── mock_ai_models_data_source.dart
+│   └── dummy/
+│       └── ai_models_dummy_data.dart
+│
+├── domain/
+│   └── entities/
+│       └── ai_model_entity.dart
+│
+└── presentation/
+    ├── pages/
+    │   └── ai_models_page.dart
+    │
+    ├── widgets/
+    │   ├── ai_models_header.dart
+    │   ├── ai_model_card.dart
+    │   ├── ai_model_filter_bar.dart
+    │   └── ai_models_states.dart
+    │
+    └── controllers/
+        └── ai_models_controller.dart
+
+TEST CHECKLIST
+    Verify no layout overflow on small/large phones, tablets, portrait, and landscape.
+    Verify dark mode, large text, screen-reader labels, touch targets, and contrast.
+    Verify model cards, category filters, search field, badges, icons, and responsive grid/list layout.
+    Verify loading, empty-search, error/retry, offline, and success representations.
+    Verify local model selection state and visual transitions without backend functionality.
+    Verify long model names/descriptions and multilingual text do not clip.
+    Verify navigation callbacks are valid and do not require unavailable routes.
+    Verify animation smoothness, rebuild scope, memory usage, and scrolling performance.
+    Verify localization readiness and RTL-safe layout.
+    Verify the screen remains UI-only with dummy data and no API, database, networking, Firebase, or AI inference.
