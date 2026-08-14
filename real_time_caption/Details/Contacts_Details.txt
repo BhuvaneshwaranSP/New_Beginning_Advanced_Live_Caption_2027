@@ -1,0 +1,48 @@
+lib/
+└── features/
+    └── contacts/
+        ├── contacts_feature.dart
+        │
+        ├── data/
+        │   ├── models/
+        │   │   └── contacts_feature_model.dart
+        │   ├── data_sources/
+        │   │   └── mock_contacts_data_source.dart
+        │   └── dummy/
+        │       └── contacts_dummy_data.dart
+        │
+        ├── domain/
+        │   └── entities/
+        │       └── contacts_feature_entity.dart
+        │
+        └── presentation/
+            ├── pages/
+            │   └── contacts_page.dart
+            │
+            ├── widgets/
+            │   ├── contacts_header.dart
+            │   ├── contacts_search_bar.dart
+            │   ├── contact_list_tile.dart
+            │   ├── contacts_filter_chips.dart
+            │   └── contacts_states.dart
+            │
+            └── controllers/
+                └── contacts_controller.dart
+
+
+
+TEST CHECKLIST
+    Verify no overflow on small phones, large phones, tablets, portrait, and landscape.
+    Verify search field behavior with keyboard open and after keyboard dismissal.
+    Verify dark mode, large text scaling, contrast, and screen-reader labels.
+    Verify contact list, empty search results, loading, error, success, and offline UI states.
+    Verify search filtering and local contact selection transitions.
+    Verify long names, multilingual names, missing status text, and empty data.
+    Verify every action button has a valid callback and does not trigger backend behavior.
+    Verify navigation callbacks can later be connected without changing widget contracts.
+    Verify lightweight animations remain smooth during search/filter changes.
+    Verify no unnecessary rebuilds, expensive work, or retained controllers.
+    Verify localization readiness for all visible strings.
+    Verify accessibility semantics and minimum touch-target sizes.
+    Verify future call/chat integration points remain UI-only.
+    Verify offline state is represented locally without real connectivity detection.

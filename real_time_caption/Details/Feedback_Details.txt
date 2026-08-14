@@ -1,0 +1,50 @@
+lib/
+└── features/
+    └── feedback/
+        ├── feedback_feature.dart
+        │
+        ├── data/
+        │   ├── models/
+        │   │   └── feedback_feature_model.dart
+        │   ├── data_sources/
+        │   │   └── mock_feedback_data_source.dart
+        │   └── dummy/
+        │       └── feedback_dummy_data.dart
+        │
+        ├── domain/
+        │   └── entities/
+        │       └── feedback_feature_entity.dart
+        │
+        └── presentation/
+            ├── pages/
+            │   └── feedback_page.dart
+            │
+            ├── widgets/
+            │   ├── feedback_header.dart
+            │   ├── feedback_rating_card.dart
+            │   ├── feedback_category_selector.dart
+            │   ├── feedback_message_field.dart
+            │   └── feedback_states.dart
+            │
+            └── controllers/
+                └── feedback_controller.dart
+
+
+TEST CHECKLIST
+    Verify layout and no overflow on small/large phones and tablets.
+    Verify portrait and landscape orientations.
+    Verify keyboard behavior while entering feedback.
+    Verify dark mode and sufficient contrast.
+    Verify large text / system font scaling.
+    Verify screen-reader labels and logical focus order.
+    Verify rating selection, category selection, text input, and character limit.
+    Verify loading, empty, success, error, and offline dummy states.
+    Verify submit button enabled/disabled transitions.
+    Verify reset/retry behavior after success or error.
+    Verify navigation/back behavior.
+    Verify long feedback text and invalid/empty input handling.
+    Verify animation smoothness and absence of unnecessary rebuilds.
+    Verify localization readiness for multilingual strings.
+    Verify no backend/API/network/database functionality is present.
+    Verify all buttons have valid callbacks.
+    Verify analyzer warnings, null-safety, deprecated APIs, and memory usage.

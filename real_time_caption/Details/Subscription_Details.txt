@@ -1,0 +1,45 @@
+lib/
+└── features/
+    └── subscription/
+        ├── subscription_feature.dart
+        │
+        ├── data/
+        │   ├── models/
+        │   │   └── subscription_plan_model.dart
+        │   ├── data_sources/
+        │   │   └── mock_subscription_data_source.dart
+        │   └── dummy/
+        │       └── subscription_dummy_data.dart
+        │
+        ├── domain/
+        │   └── entities/
+        │       └── subscription_plan_entity.dart
+        │
+        └── presentation/
+            ├── pages/
+            │   └── subscription_page.dart
+            │
+            ├── widgets/
+            │   ├── subscription_header.dart
+            │   ├── subscription_plan_card.dart
+            │   ├── subscription_billing_selector.dart
+            │   ├── subscription_benefits.dart
+            │   └── subscription_states.dart
+            │
+            └── controllers/
+                └── subscription_controller.dart
+
+
+TEST CHECKLIST
+    Verify phone, tablet, portrait, and landscape layouts without overflow or clipping.
+    Verify dark mode, large text scaling, screen-reader labels, contrast, and minimum touch targets.
+    Verify plan selection, billing-cycle switching, and selected-state transitions.
+    Verify long/null/edge-case plan data does not break cards or feature lists.
+    Verify loading, empty, error, success, and offline UI representations.
+    Verify all buttons have valid callbacks and do not invoke backend functionality.
+    Verify navigation callback integration points are ready for the existing router.
+    Verify future subscription/payment integration comments occur at the intended UI locations.
+    Verify animation smoothness and absence of unnecessary rebuilds.
+    Verify localization readiness for plan names, descriptions, currencies, and feature labels.
+    Verify no deprecated Flutter/Material APIs, analyzer warnings, or nullable-value errors.
+    Verify accessibility semantics communicate plan status without relying only on color.

@@ -1,0 +1,49 @@
+lib/
+└── features/
+    └── profile/
+        ├── profile_feature.dart
+        │
+        ├── data/
+        │   ├── models/
+        │   │   └── profile_feature_model.dart
+        │   ├── data_sources/
+        │   │   └── mock_profile_data_source.dart
+        │   └── dummy/
+        │       └── profile_dummy_data.dart
+        │
+        ├── domain/
+        │   └── entities/
+        │       └── profile_feature_entity.dart
+        │
+        └── presentation/
+            ├── pages/
+            │   └── profile_page.dart
+            │
+            ├── widgets/
+            │   ├── profile_header.dart
+            │   ├── language_preference_card.dart
+            │   ├── profile_action_list.dart
+            │   └── profile_states.dart
+            │
+            └── controllers/
+                └── profile_controller.dart
+
+
+TEST CHECKLIST
+    Verify profile layout has no overflow on small phones.
+    Verify portrait and landscape layouts.
+    Verify tablet layout and maximum content width.
+    Verify dark/light theme contrast.
+    Verify large text and text scaling.
+    Verify screen-reader labels and semantic meaning.
+    Verify all buttons have valid callbacks.
+    Verify profile header, language preference, and action sections render correctly.
+    Verify long/null-safe dummy profile data.
+    Verify loading, empty, error, and offline UI representations.
+    Verify local state transitions do not require backend/state-management packages.
+    Verify navigation placeholders remain non-functional and do not crash.
+    Verify future integration comments are located at the intended integration points.
+    Verify localization readiness for multilingual labels and profile data.
+    Verify animations remain lightweight and smooth.
+    Verify no deprecated Flutter/Material APIs or analyzer warnings.
+    Verify no unnecessary rebuilds or memory-heavy widgets.

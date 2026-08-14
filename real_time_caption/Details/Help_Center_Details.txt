@@ -1,0 +1,45 @@
+lib/
+└── features/
+    └── help_center/
+        ├── help_center_feature.dart
+        │
+        ├── data/
+        │   ├── models/
+        │   │   └── help_center_feature_model.dart
+        │   ├── data_sources/
+        │   │   └── mock_help_center_data_source.dart
+        │   └── dummy/
+        │       └── help_center_dummy_data.dart
+        │
+        ├── domain/
+        │   └── entities/
+        │       └── help_center_feature_entity.dart
+        │
+        └── presentation/
+            ├── pages/
+            │   └── help_center_page.dart
+            │
+            ├── widgets/
+            │   ├── help_center_header.dart
+            │   ├── help_center_search.dart
+            │   ├── help_center_category_card.dart
+            │   ├── help_center_article_tile.dart
+            │   └── help_center_states.dart
+            │
+            └── controllers/
+                └── help_center_controller.dart
+
+
+TEST CHECKLIST
+    Verify no layout overflow on small phones, large phones, tablets, portrait, and landscape.
+    Verify search field behavior with keyboard open/closed and long queries.
+    Verify dark mode, large text, contrast, and screen-reader semantics.
+    Verify FAQ expansion/collapse state transitions.
+    Verify loading, empty-search, error/retry, success, and offline representations.
+    Verify long FAQ titles/descriptions and null/empty-safe dummy data.
+    Verify all buttons and navigation callbacks execute without errors.
+    Verify responsive two-column/compact layouts on wider screens.
+    Verify animations remain lightweight and do not cause excessive rebuilds.
+    Verify localization readiness for multilingual text and longer translations.
+    Verify no backend, API, Firebase, database, networking, authentication, AI inference, or state-management package is used.
+    Verify future integration comments remain at the intended integration points.

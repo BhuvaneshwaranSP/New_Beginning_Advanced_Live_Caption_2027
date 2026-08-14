@@ -1,0 +1,47 @@
+lib/
+└── features/
+    └── history/
+        ├── history_feature.dart
+        │
+        ├── data/
+        │   ├── models/
+        │   │   └── history_feature_model.dart
+        │   ├── data_sources/
+        │   │   └── mock_history_data_source.dart
+        │   └── dummy/
+        │       └── history_dummy_data.dart
+        │
+        ├── domain/
+        │   └── entities/
+        │       └── history_feature_entity.dart
+        │
+        └── presentation/
+            ├── pages/
+            │   └── history_page.dart
+            │
+            ├── widgets/
+            │   ├── history_header.dart
+            │   ├── history_filter_bar.dart
+            │   ├── history_session_card.dart
+            │   └── history_states.dart
+            │
+            └── controllers/
+                └── history_controller.dart
+
+
+TEST CHECKLIST
+    Verify layout and overflow on small phones, large phones, tablets, portrait, and landscape.
+    Verify keyboard/search field does not cause overlap or clipping.
+    Verify light/dark themes and large text scaling.
+    Verify screen-reader labels, semantic status information, and touch targets.
+    Verify loading, populated, empty, error, success, and offline/reconnecting representations.
+    Verify search, type filtering, sorting, reset, and state transitions.
+    Verify long multilingual session titles, translated text, speaker names, and null/empty-safe display.
+    Verify history-card action callbacks and navigation callback integration points.
+    Verify animation smoothness and absence of unnecessary rebuilds.
+    Verify no backend/API/database/networking/AI functionality is executed.
+    Verify localization readiness for Tamil, Telugu, Hindi, Malayalam, English, and other supported languages.
+    Verify accessibility contrast and that status is not communicated by color alone.
+    Verify performance with a larger dummy history list and no unnecessary object recreation.
+    Verify offline history presentation remains understandable.
+    Verify analyzer has no deprecated API, constant-value, null-safety, or overflow issues.

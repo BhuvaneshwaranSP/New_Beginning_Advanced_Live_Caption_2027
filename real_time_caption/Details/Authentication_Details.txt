@@ -1,0 +1,47 @@
+lib/
+└── features/
+    └── authentication/
+        ├── authentication_feature.dart
+        │
+        ├── data/
+        │   ├── models/
+        │   │   └── authentication_feature_model.dart
+        │   ├── data_sources/
+        │   │   └── mock_authentication_data_source.dart
+        │   └── dummy/
+        │       └── authentication_dummy_data.dart
+        │
+        ├── domain/
+        │   └── entities/
+        │       └── authentication_feature_entity.dart
+        │
+        └── presentation/
+            ├── pages/
+            │   └── authentication_page.dart
+            │
+            ├── widgets/
+            │   ├── authentication_brand_header.dart
+            │   ├── authentication_form.dart
+            │   ├── authentication_mode_switcher.dart
+            │   └── authentication_states.dart
+            │
+            └── controllers/
+                └── authentication_controller.dart
+
+
+Test Checklist
+    Verify no layout overflow on small phones, large phones, tablets, portrait, and landscape.
+    Verify keyboard does not cover email/password fields or primary action.
+    Verify light and dark Material 3 themes.
+    Verify large text/font scaling and screen-reader semantics.
+    Verify email/password validation and invalid-input feedback.
+    Verify password visibility toggle.
+    Verify sign-in/create-account mode transition.
+    Verify loading and local error/success representations.
+    Verify buttons have valid callbacks and do not perform backend work.
+    Verify navigation callback integration point is ready for the application's router.
+    Verify long/null/invalid dummy data does not cause overflow.
+    Verify localization readiness for multilingual LinguaLive UI.
+    Verify animation remains smooth and lightweight.
+    Verify no networking, authentication SDK, database, Firebase, persistence, or real credentials are used.
+    Verify analyzer reports no deprecated APIs or obvious warnings.

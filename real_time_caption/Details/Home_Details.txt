@@ -1,0 +1,50 @@
+lib/
+└── features/
+    └── home/
+        ├── feature.dart
+        │
+        ├── data/
+        │   ├── models/
+        │   │   └── home_feature_model.dart
+        │   ├── data_sources/
+        │   │   └── mock_home_data_source.dart
+        │   └── dummy/
+        │       └── home_dummy_data.dart
+        │
+        ├── domain/
+        │   └── entities/
+        │       └── home_feature_entity.dart
+        │
+        └── presentation/
+            ├── pages/
+            │   └── home_page.dart
+            │
+            ├── widgets/
+            │   ├── home_header.dart
+            │   ├── language_pair_card.dart
+            │   ├── home_feature_grid.dart
+            │   ├── recent_session_card.dart
+            │   └── home_states.dart
+            │
+            └── controllers/
+                └── home_controller.dart
+
+
+TEST CHECKLIST
+    Home page compiles with the existing LinguaLive project structure
+    Phone portrait/landscape and tablet responsiveness
+    No overflow with large text or long multilingual labels
+    Light/dark Material 3 themes
+    Screen-reader semantics and accessible touch targets
+    Source/target language selection
+    Language swap interaction
+    Live Speech primary action
+    All Home feature cards have valid callbacks
+    Recent-session rendering
+    Empty, loading, error, success, and offline UI states
+    Bottom navigation state
+    Animation and rebuild performance
+    Localization readiness
+    No backend/API/Firebase/database/networking/AI functionality
+    No state-management package
+    Future integration comments are located at the relevant UI integration points

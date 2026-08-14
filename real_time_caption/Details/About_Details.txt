@@ -1,0 +1,43 @@
+lib/
+└── features/
+    └── about/
+        ├── feature.dart
+        │
+        ├── data/
+        │   ├── models/
+        │   │   └── about_feature_model.dart
+        │   ├── dummy/
+        │   │   └── about_dummy_data.dart
+        │   └── mappers/
+        │       └── about_feature_mapper.dart
+        │
+        ├── domain/
+        │   └── entities/
+        │       └── about_feature_entity.dart
+        │
+        └── presentation/
+            ├── pages/
+            │   └── about_page.dart
+            │
+            └── widgets/
+                ├── about_capability_card.dart
+                └── about_technology_tile.dart
+
+TEST CHECKLIST
+    Verify phone portrait/landscape layout without overflow or clipping.
+    Verify small and large phones plus tablet layouts.
+    Verify light mode, dark mode, and system theme.
+    Verify large text/font scaling and screen-reader semantics.
+    Verify all buttons/interactive tiles have valid callbacks.
+    Verify multilingual text renders correctly, including Tamil, Telugu, Hindi, Malayalam, and Arabic/Indic scripts.
+    Verify long technology names and descriptions wrap correctly.
+    Verify scrolling behavior and SliverAppBar behavior.
+    Verify empty feature/technology lists do not crash.
+    Verify null/empty descriptive values are handled safely.
+    Verify navigation back behavior.
+    Verify animation remains smooth on low-end devices.
+    Verify no backend, API, Firebase, persistence, networking, or state-management package is used.
+    Verify accessibility labels and adequate touch targets.
+    Verify localization readiness for all user-facing strings.
+    Verify analyzer reports no deprecated APIs or obvious warnings.
+

@@ -1,0 +1,50 @@
+lib/
+└── features/
+    └── onboarding/
+        ├── onboarding_feature.dart
+        │
+        ├── data/
+        │   ├── models/
+        │   │   └── onboarding_feature_model.dart
+        │   ├── data_sources/
+        │   │   └── mock_onboarding_data_source.dart
+        │   └── dummy/
+        │       └── onboarding_dummy_data.dart
+        │
+        ├── domain/
+        │   └── entities/
+        │       └── onboarding_feature_entity.dart
+        │
+        └── presentation/
+            ├── pages/
+            │   └── onboarding_page.dart
+            │
+            ├── widgets/
+            │   ├── onboarding_header.dart
+            │   ├── language_selection_card.dart
+            │   ├── onboarding_progress.dart
+            │   └── onboarding_states.dart
+            │
+            └── controllers/
+                └── onboarding_controller.dart
+
+
+TEST CHECKLIST
+    Verify onboarding renders without overflow on small/large phones and tablets.
+    Verify portrait and landscape layouts.
+    Verify light and dark themes.
+    Verify large text / system text scaling.
+    Verify screen-reader labels, semantic headings, and touch-target sizes.
+    Verify source and target language selections update correctly.
+    Verify the same language cannot be selected for both source and target.
+    Verify language swapping works through the local UI state.
+    Verify primary action remains accessible with keyboard/focus navigation.
+    Verify loading, empty, error, success, and offline visual states represented by the UI model where relevant.
+    Verify long language names and multilingual text do not overflow.
+    Verify navigation callback is valid and contains no backend implementation.
+    Verify future language/session integration comments are located at the intended integration points.
+    Verify animations remain lightweight and do not cause unnecessary rebuilds.
+    Verify no network, authentication, persistence, AI inference, speech recognition, translation, Firebase, or state-management package is used.
+    Verify all dynamic UI is driven by local dummy models.
+    Verify localization readiness for Tamil, English, Telugu, Hindi, and Malayalam.
+    Verify analyzer reports no obvious null-safety, deprecated API, or constant-expression issues.

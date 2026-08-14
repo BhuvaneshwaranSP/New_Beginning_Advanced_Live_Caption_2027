@@ -1,0 +1,52 @@
+lib/
+└── features/
+    └── downloads/
+        ├── downloads_feature.dart
+        │
+        ├── data/
+        │   ├── models/
+        │   │   └── downloads_feature_model.dart
+        │   ├── data_sources/
+        │   │   └── mock_downloads_data_source.dart
+        │   └── dummy/
+        │       └── downloads_dummy_data.dart
+        │
+        ├── domain/
+        │   └── entities/
+        │       └── downloads_feature_entity.dart
+        │
+        └── presentation/
+            ├── pages/
+            │   └── downloads_page.dart
+            │
+            ├── widgets/
+            │   ├── downloads_header.dart
+            │   ├── download_item_card.dart
+            │   ├── downloads_filter_bar.dart
+            │   └── downloads_states.dart
+            │
+            └── controllers/
+                └── downloads_controller.dart
+
+
+
+TEST CHECKLIST
+    Verify layout and overflow on small and large phones.
+    Verify portrait and landscape layouts.
+    Verify tablet layout and adaptive grid/list behavior.
+    Verify keyboard does not obscure search.
+    Verify light and dark themes.
+    Verify large text / text scaling.
+    Verify screen-reader labels and touch targets.
+    Verify loading, empty, error, success, and offline dummy states.
+    Verify search and filter state transitions.
+    Verify long filenames, multilingual text, null/empty metadata, and large file sizes.
+    Verify download-card actions have safe callbacks.
+    Verify navigation callbacks do not crash when not connected to a router.
+    Verify no backend, API, database, networking, authentication, or persistence is executed.
+    Verify future integration comments occur only at intended integration points.
+    Verify animation remains smooth and does not cause excessive rebuilds.
+    Verify localization readiness for Tamil, English, Telugu, Hindi, and Malayalam.
+    Verify accessibility does not depend on color alone.
+    Verify memory/performance with a longer dummy download list.
+    Verify analyzer produces no obvious warnings or deprecated-API errors.

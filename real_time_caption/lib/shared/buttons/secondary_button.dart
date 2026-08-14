@@ -1,5 +1,9 @@
-/// Auto-generated placeholder for secondary_button.
+import 'package:flutter/material.dart';
 
-class SecondaryButton {
-  const SecondaryButton();
+class SecondaryButton extends StatelessWidget {
+  final String label;
+  final VoidCallback onPressed;
+  const SecondaryButton({super.key, required this.label, required this.onPressed});
+  @override
+  Widget build(BuildContext context) => SizedBox(width: double.infinity, child: OutlinedButton(onPressed: onPressed, child: Text(label)));
 }
