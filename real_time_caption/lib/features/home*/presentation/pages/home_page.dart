@@ -155,15 +155,9 @@
 */
 
 import 'package:flutter/material.dart';
-
-import '../../data/data_sources/mock_home_data_source.dart';
-import '../../domain/entities/home_feature_entity.dart';
-import '../controllers/home_controller.dart';
-import '../widgets/home_feature_grid.dart';
-import '../widgets/home_header.dart';
-import '../widgets/home_states.dart';
-import '../widgets/language_pair_card.dart';
-import '../widgets/recent_session_card.dart';
+import 'package:go_router/go_router.dart';
+import 'package:real_time_caption/app/routes.dart';
+import '../../home_feature.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -293,37 +287,6 @@ class _HomePageState extends State<HomePage> {
             ),
           ],
         ),
-      ),
-      bottomNavigationBar: NavigationBar(
-        selectedIndex: _controller.navigationIndex,
-        onDestinationSelected: (int index) {
-          _controller.selectNavigationItem(index);
-
-          // Future: connect each destination to the project's existing router;
-          // NavigationBar currently represents local UI selection only.
-        },
-        destinations: const <NavigationDestination>[
-          NavigationDestination(
-            icon: Icon(Icons.home_outlined),
-            selectedIcon: Icon(Icons.home_rounded),
-            label: 'Home',
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.forum_outlined),
-            selectedIcon: Icon(Icons.forum_rounded),
-            label: 'Chats',
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.history_outlined),
-            selectedIcon: Icon(Icons.history_rounded),
-            label: 'History',
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.person_outline_rounded),
-            selectedIcon: Icon(Icons.person_rounded),
-            label: 'Profile',
-          ),
-        ],
       ),
     );
   }
@@ -519,5 +482,87 @@ class _HomePageState extends State<HomePage> {
         // scanning belong to the session-joining flow rather than Home UI.
         break;
     }
+  }
+}
+
+class MainNavigationPage extends StatelessWidget {
+  const MainNavigationPage({super.key, required this.child});
+
+  final Widget child;
+
+  int _getSelectedIndex(BuildContext context) {
+    final String location = GoRouterState.of(context).uri.path;
+
+    if (location.startsWith(AppRoutes.chat)) {
+      return 1;
+    }
+
+    if (location.startsWith(AppRoutes.history)) {
+      return 2;
+    }
+
+    if (location.startsWith(AppRoutes.profile)) {
+      return 3;
+    }
+
+    return 0;
+  }
+
+  void _onNavigationSelected(BuildContext context, int index) {
+    switch (index) {
+      case 0:
+        context.go(AppRoutes.home);
+        break;
+
+      case 1:
+        context.go(AppRoutes.chat);
+        break;
+
+      case 2:
+        context.go(AppRoutes.history);
+        break;
+
+      case 3:
+        context.go(AppRoutes.profile);
+        break;
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final int selectedIndex = _getSelectedIndex(context);
+
+    return Scaffold(
+      body: child,
+
+      bottomNavigationBar: NavigationBar(
+        selectedIndex: selectedIndex,
+        onDestinationSelected: (int index) {
+          _onNavigationSelected(context, index);
+        },
+        destinations: const <NavigationDestination>[
+          NavigationDestination(
+            icon: Icon(Icons.home_outlined),
+            selectedIcon: Icon(Icons.home_rounded),
+            label: 'Home',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.forum_outlined),
+            selectedIcon: Icon(Icons.forum_rounded),
+            label: 'Chats',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.history_outlined),
+            selectedIcon: Icon(Icons.history_rounded),
+            label: 'History',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.person_outline_rounded),
+            selectedIcon: Icon(Icons.person_rounded),
+            label: 'Profile',
+          ),
+        ],
+      ),
+    );
   }
 }

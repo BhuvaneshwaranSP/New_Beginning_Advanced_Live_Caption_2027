@@ -1,0 +1,46 @@
+lib/
+└── features/
+    └── privacy_security/
+        ├── privacy_security_feature.dart
+        │
+        ├── data/
+        │   ├── models/
+        │   │   └── privacy_security_model.dart
+        │   ├── data_sources/
+        │   │   └── mock_privacy_security_data_source.dart
+        │   └── dummy/
+        │       └── privacy_security_dummy_data.dart
+        │
+        ├── domain/
+        │   └── entities/
+        │       └── privacy_security_entity.dart
+        │
+        └── presentation/
+            ├── pages/
+            │   └── privacy_security_page.dart
+            │
+            ├── widgets/
+            │   ├── privacy_security_header.dart
+            │   ├── privacy_security_section.dart
+            │   ├── privacy_security_tile.dart
+            │   └── privacy_security_states.dart
+            │
+            └── controllers/
+                └── privacy_security_controller.dart
+
+
+Test Checklist
+    Verify layout and overflow on small/large phones and tablets.
+    Verify portrait and landscape orientations.
+    Verify dark mode, large text, contrast, and screen-reader labels.
+    Verify all privacy/security rows have valid callbacks.
+    Verify toggle state transitions for local dummy settings.
+    Verify delete-account confirmation dialog and cancellation.
+    Verify empty/error/loading representations where applicable.
+    Verify long labels and multilingual text do not overflow.
+    Verify navigation/back behavior from the privacy & security page.
+    Verify touch targets and accessibility semantics.
+    Verify no backend, authentication, persistence, networking, or real security operation is performed.
+    Verify future integration comments remain at the intended integration points.
+    Verify localization readiness for Tamil, English, Telugu, Hindi, and Malayalam.
+    Verify rebuilds remain lightweight and no unnecessary animation is introduced.
