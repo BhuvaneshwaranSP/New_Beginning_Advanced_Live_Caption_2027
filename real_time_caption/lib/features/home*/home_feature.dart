@@ -76,8 +76,15 @@
     Not applicable.
 
 26. COMPLETE TESTING CHECKLIST
-    Verify imports and router access.
+    Verify exports and router access.
 */
 
 export 'domain/entities/home_feature_entity.dart';
 export 'presentation/pages/home_page.dart';
+export 'data/data_sources/mock_home_data_source.dart';
+export 'presentation/controllers/home_controller.dart';
+export 'presentation/widgets/home_feature_grid.dart';
+export 'presentation/widgets/home_header.dart';
+export 'presentation/widgets/home_states.dart';
+export 'presentation/widgets/language_pair_card.dart';
+export 'presentation/widgets/recent_session_card.dart';

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'app/app.dart';
+import 'package:real_time_caption/app/app.dart';
 
 void main() {
   FlutterError.onError = (details) {

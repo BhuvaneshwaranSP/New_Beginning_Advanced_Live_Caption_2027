@@ -1,0 +1,47 @@
+lib/
+└── features/
+    └── sessions/
+        ├── sessions_feature.dart
+        │
+        ├── data/
+        │   ├── models/
+        │   │   └── session_model.dart
+        │   ├── data_sources/
+        │   │   └── mock_sessions_data_source.dart
+        │   └── dummy/
+        │       └── sessions_dummy_data.dart
+        │
+        ├── domain/
+        │   └── entities/
+        │       └── session_entity.dart
+        │
+        └── presentation/
+            ├── pages/
+            │   └── sessions_page.dart
+            │
+            ├── widgets/
+            │   ├── sessions_header.dart
+            │   ├── session_summary_card.dart
+            │   ├── session_filter_bar.dart
+            │   ├── session_card.dart
+            │   └── sessions_states.dart
+            │
+            └── controllers/
+                └── sessions_controller.dart
+
+
+Test Checklist
+    Verify phone, tablet, portrait, and landscape layouts with no overflow.
+    Verify large text scaling, screen-reader labels, touch targets, and contrast.
+    Verify light/dark themes.
+    Verify search filtering and session-type filtering.
+    Verify active, scheduled, completed, empty, and offline UI states.
+    Verify session cards with long participant names and multilingual text.
+    Verify loading transition and retry callback.
+    Verify navigation callbacks are valid but contain no future functionality.
+    Verify animation smoothness and rebuild performance.
+    Verify localization readiness for Tamil, English, Telugu, Hindi, and Malayalam.
+    Verify the UI remains understandable without implementing live communication services.
+    Verify future integration points remain limited to the documented session flow: create session → select languages → invite/join → live communication → captions/translation → end → history.
+
+    Verify the implementation does not introduce WebSocket, speech recognition, translation, QR, database, persistence, or other backend functionality at this UI-only stage. The project documentation identifies these as future/live-system capabilities.

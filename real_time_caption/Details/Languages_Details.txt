@@ -1,0 +1,55 @@
+lib/
+└── features/
+    └── languages/
+        ├── languages_feature.dart
+        │
+        ├── data/
+        │   ├── models/
+        │   │   └── languages_feature_model.dart
+        │   ├── data_sources/
+        │   │   └── mock_languages_data_source.dart
+        │   └── dummy/
+        │       └── languages_dummy_data.dart
+        │
+        ├── domain/
+        │   └── entities/
+        │       └── languages_feature_entity.dart
+        │
+        └── presentation/
+            ├── pages/
+            │   └── languages_page.dart
+            │
+            ├── widgets/
+            │   ├── languages_header.dart
+            │   ├── language_pair_card.dart
+            │   ├── language_section.dart
+            │   ├── language_tile.dart
+            │   └── languages_states.dart
+            │
+            └── controllers/
+                └── languages_controller.dart
+
+
+
+TEST CHECKLIST
+    Verify responsive layout on small/large phones and tablets.
+    Verify portrait and landscape orientation without overflow.
+    Verify keyboard/search interaction and scrolling.
+    Verify light and dark Material 3 themes.
+    Verify large text/font scaling and no clipped language names.
+    Verify screen-reader labels for language cards, swap, search, and availability.
+    Verify touch targets are sufficiently large.
+    Verify My Languages, Preferred Languages, Recent Languages, and All Supported Languages states.
+    Verify Auto-detect selection state.
+    Verify language-pair swap updates the local UI correctly.
+    Verify search filtering with empty/no-result input.
+    Verify loading, empty, offline, and unavailable-language representations.
+    Verify invalid/null/long language data does not break layout.
+    Verify all buttons have valid callbacks.
+    Verify navigation callback integration points without implementing navigation.
+    Verify future language-service integration comments occur at the intended UI locations.
+    Verify localization readiness for language names and UI labels.
+    Verify animations remain lightweight and do not cause unnecessary rebuilds.
+    Verify accessibility semantics do not duplicate visible labels.
+    Verify performance with a larger supported-language list.
+    Verify no backend, API, database, authentication, networking, AI inference, or persistence is executed.

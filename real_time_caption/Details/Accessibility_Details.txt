@@ -1,0 +1,48 @@
+lib/
+└── features/
+    └── accessibility/
+        ├── accessibility_feature.dart
+        │
+        ├── data/
+        │   ├── models/
+        │   │   └── accessibility_feature_model.dart
+        │   ├── data_sources/
+        │   │   └── mock_accessibility_data_source.dart
+        │   └── dummy/
+        │       └── accessibility_dummy_data.dart
+        │
+        ├── domain/
+        │   └── entities/
+        │       └── accessibility_feature_entity.dart
+        │
+        └── presentation/
+            ├── pages/
+            │   └── accessibility_page.dart
+            │
+            ├── widgets/
+            │   ├── accessibility_header.dart
+            │   ├── accessibility_preview_card.dart
+            │   ├── accessibility_setting_tile.dart
+            │   ├── communication_preferences_card.dart
+            │   └── accessibility_states.dart
+            │
+            └── controllers/
+                └── accessibility_controller.dart
+
+
+TEST CHECKLIST
+    Verify layout and no overflow on small/large phones and tablets.
+    Verify portrait and landscape orientations.
+    Verify dark mode, large text, and increased system text scale.
+    Verify screen-reader labels, semantic grouping, and adequate touch targets.
+    Verify text-size and caption-size controls update the preview locally.
+    Verify high-contrast, reduced-motion, spoken-output, visual-alert, and haptic controls transition correctly.
+    Verify communication-preference selection and local state transitions.
+    Verify loading, empty, error/retry, success, and offline representations where applicable.
+    Verify all buttons and controls have valid callbacks.
+    Verify navigation back behavior.
+    Verify multilingual labels and localization readiness.
+    Verify animations remain lightweight and respect reduced-motion state.
+    Verify no backend, API, Firebase, persistence, networking, or state-management package is used.
+    Verify analyzer has no deprecated API, null-safety, overflow, or obvious warning issues.
+    Verify accessibility settings remain understandable without relying only on color.
